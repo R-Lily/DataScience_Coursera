@@ -65,4 +65,4 @@ merged_data <- melt(data = merged_data, id = c("SubjectID", "ActivityID"))
 average_data <- dcast(merged_data, SubjectID + ActivityID ~ variable, mean)
 
 ##6. Save second data set
-write.table(average_data, file="tidyData.txt")
+write.table(average_data, file="tidyData.txt", row.name = FALSE)
